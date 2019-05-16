@@ -21,7 +21,20 @@ header {
   padding: 0 20px;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+h1 i {
+  color: #72e0e0;
+}
+
+.search {
+  margin: auto 0;
+}
+
 .search button {
+  height: 1.7rem;
   position: relative;
   right: 0.3rem;
 }
@@ -34,7 +47,7 @@ sidebar {
 }
 
 sidebar input {
-  margin: 1rem auto;
+  margin: 0 auto;
 }
 
 .sidebar-btn {
@@ -49,6 +62,7 @@ sidebar section {
 
 button:hover {
   cursor: pointer;
+  background-color: #0d9292c8
 }
 
 input {
@@ -64,8 +78,8 @@ input {
 }
 
 .input-task {
+  margin: 1rem auto;
   width: 90%;
-  margin: auto;
 }
 
 .input-task input {
@@ -82,10 +96,16 @@ input {
   padding: 10px;
 }
 
+.task-section-text {
+  font-family: 'Satisfy', cursive;
+  font-size: 2rem;
+  text-align: center;
+ }
+
 button {
   background-color: #1bbaba;
   border: 1px solid #11bbba;
-  height: 1.7rem;
+  height: 1.8rem;
   margin: 1rem 0;
   position: relative;
   bottom: 2px;
@@ -97,7 +117,7 @@ hr {
 
 .input-btn {
   position: relative;
-  right: 1rem;
+  right: .5rem;
 }
 
 article {

@@ -11,7 +11,7 @@
 </head>
 <body>
   <header>
-    <h1>Check Yo' Self <i class="fas fa-flag-checkered"></i> </h1>
+    <h1>Check <span>Yo'</span> Self <i class="fas fa-flag-checkered"></i> </h1>
     <div class="search">
       <input type="text" placeholder="search" />
       <button><i class="fas fa-search"></i></button>
@@ -20,20 +20,20 @@
   <sidebar>
     <section>
       <label for="task-title">task title</label>
-      <input type="text" class="task-title" placeholder="a new todo title" />
+      <input type="text" class="task-title" placeholder="a new todo title" id="task-title" />
       <div class="input-task">
         <label for="task-item">task item</label>
-        <input type="text" class="task-item" placeholder="type a new item" />
+        <input type="text" class="task-item" placeholder="type a new item"  />
         <button class="input-btn">+</button>
       </div>
-      <button class="task sidebar-btn">Make task list</button>
+      <button class="task sidebar-btn" >Make Task List</button>
       <button class="clear sidebar-btn">Clear All</button>
     </section>
     <hr>
-    <button class="sidebar-btn">Filter by Urgency</button>
+    <button class="sidebar-btn">Filter By Urgency</button>
   </sidebar>
     <section class='todo'>
-      <p>booo</p>
+      <p class="task-section-text">Add some todos!</p>
   </section>
   <article class="card">
     <h3>Title</h3>
@@ -49,4 +49,6 @@
     <!-- empty circle <i class="far fa-circle"></i> -->
   </article>
 </body>
+<script src="todo.js"></script>
+<script src="index.js"></script>
 </html>

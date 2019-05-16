@@ -18,9 +18,13 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Satisfy" rel="stylesheet">
   </header>
   <sidebar>
-    <input />
-    <input />
-    <button>+</button>
+    <label for="task-title"></label>
+    <input type="text" class="task-title" placeholder="a new todo title" />
+    <div class="input-task">
+      <label for="task-item"></label>
+      <input type="text" class="task-item" placeholder="type a new item" />
+      <button class="input-btn">+</button>
+    </div>
     <button class="task">Make task list</button>
     <button class="clear">Clear All</button>
     <hr>

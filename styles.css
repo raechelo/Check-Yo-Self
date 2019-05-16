@@ -19,19 +19,38 @@ header {
 }
 
 sidebar {
-  grid-area: sidebar;
   background-color: #E2CC9E;
+  grid-area: sidebar;
+  padding: 5px;
   text-align: center;
 }
 
 sidebar input {
   padding-left: 2px;
   margin: auto;
+}
 
+.task-title {
+  width: 90%;
+}
+
+.input-task {
+  width: 90%;
+  margin: auto;
 }
 
 .clear {
   display: block;
+  margin: auto;
+}
+
+button {
+  margin: 1rem 0;
+}
+
+.input-btn {
+  position: relative;
+  right: 1rem;
 }
 
 article {

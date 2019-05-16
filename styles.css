@@ -8,30 +8,59 @@ body {
   grid-template-rows: 1fr 15fr;
   height: 100vh;
   margin: 0;
+  text-transform: capitalize;
 }
 
 header {
   background-color: #ef887f;
+  border-bottom: 5px solid #72e0e0;
   display: flex;
+  justify-content: space-between;
   font-family: 'Satisfy', cursive;
   grid-area: header;
-  padding: 10px;
+  padding: 0 20px;
+}
+
+.search button {
+  position: relative;
+  right: 0.3rem;
 }
 
 sidebar {
-  background-color: #E2CC9E;
+  background-color: #72e0e0;
   grid-area: sidebar;
   padding: 5px;
   text-align: center;
 }
 
 sidebar input {
+  margin: 1rem auto;
+}
+
+.sidebar-btn {
+  font-size: 1.2rem;
+  height: 2.2rem;
+  width: 100%;
+}
+
+sidebar section {
+  height: 17rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input {
+  border: 1px solid #1bbaba;
+  height: 1.5rem;
+  font-size: 1rem;
   padding-left: 2px;
-  margin: auto;
+  text-transform: capitalize;
 }
 
 .task-title {
-  width: 90%;
+  width: 80%;
 }
 
 .input-task {
@@ -39,13 +68,31 @@ sidebar input {
   margin: auto;
 }
 
+.input-task input {
+  width: 80%;
+}
+
 .clear {
   display: block;
   margin: auto;
 }
 
+.todo {
+  background-color: #E2DBC9;
+  padding: 10px;
+}
+
 button {
+  background-color: #1bbaba;
+  border: 1px solid #11bbba;
+  height: 1.7rem;
   margin: 1rem 0;
+  position: relative;
+  bottom: 2px;
+}
+
+hr {
+  border: 1px solid #1bbaba;
 }
 
 .input-btn {

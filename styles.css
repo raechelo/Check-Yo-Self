@@ -1,0 +1,48 @@
+body {
+  display: grid;
+  font-family: 'Open Sans', sans-serif;
+  grid-template-areas: "header header"
+  "sidebar todo"
+  "sidebar todo";
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 15fr;
+  height: 100vh;
+  margin: 0;
+}
+
+header {
+  background-color: #ef887f;
+  display: flex;
+  font-family: 'Satisfy', cursive;
+  grid-area: header;
+  padding: 10px;
+}
+
+sidebar {
+  grid-area: sidebar;
+  background-color: #E2CC9E;
+  text-align: center;
+}
+
+sidebar input {
+  padding-left: 2px;
+  margin: auto;
+
+}
+
+.clear {
+  display: block;
+}
+
+article {
+  display: none;
+}
+
+
+/* 
+//COLORS
+// #1bbaba;
+// #72e0e0;
+// #ef887f;
+// #efaba5;
+// #E2CC9E; */

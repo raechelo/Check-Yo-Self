@@ -14,8 +14,8 @@ let tasks = [];
 // event listeners
 addTodoBtn.addEventListener('click', addTodo);
 addTaskBtn.addEventListener('click', createTask);
-taskSection.addEventListener('click', deleteTask)
-// clearBtn.addEventListener('click', clearTasks);
+taskSection.addEventListener('click', typeOfClick)
+clearBtn.addEventListener('click', clearFields);
 
 // functions
 
@@ -26,25 +26,20 @@ function addTodo() {
 }
 
 function createTask() {
-  const newTodo = {title: taskTitle.value, tasks: tasks, id:Date.now()}
+  const newTodo = {title: taskTitle.value, tasks: tasks, id:Date.now(), urgent: false}
   todos.push(newTodo)
   addTask(newTodo)
   clearFields();
   tasks = [];
 }
 
-// function mapTasks(todos) {
-//   return todos.map(t => addTask(t))
-// }
-
 function addTask(t) {
   let todo = `<article id=${t.id} class="card">
     <h3>${t.title}</h3>
-    <hr>
-    ${t.tasks.map(a => a)}
-    <hr>
+    ${t.tasks.map(a => `<p><i class="far fa-circle"></i>${a}</p>`)}
+    <div class="task-btns">
     <button class="urgent-btn" id="urgent-btn-js"><i class="fas fa-exclamation"></i></button>
-    <button class="delete-btn" id="delete-btn-js"><i class="far fa-times-circle"></i></button>
+    <button class="delete-btn" id="delete-btn-js"><i class="far fa-times-circle"></i></button> </div>
   </article>`
   taskSection.insertAdjacentHTML('beforeend', todo)
 }
@@ -55,9 +50,22 @@ function clearFields() {
   listSection.innerHTML = ''
 }
 
-function deleteTask(e) {
-  todos = todos.filter(t => t.id !== parseInt(e.target.parentElement.id));
-  taskSection.innerHTML = '';
-  todos.map(t => addTask(t));
-  console.log(todos)
+function typeOfClick(e) {
+  e.target.id === 'delete-btn-js' ? deleteTask(e) : urgentTask(e)
 }
+
+function deleteTask(e) {
+  todos = todos.filter(t => t.id !== parseInt(e.target.parentElement.parentElement.id));
+  e.target.parentElement.parentElement.remove();
+}
+
+function urgentTask(e) {
+  let urgentTodo = todos.find(t => t.id === parseInt(e.target.parentElement.parentElement.id))
+  urgentTodo.urgent = !urgentTodo.urgent;
+  if (urgentTodo.urgent === true) {
+    e.target.parentElement.parentElement.classList.add('urgent')
+  } else {
+    e.target.parentElement.parentElement.classList.remove('urgent')
+  }
+}
+

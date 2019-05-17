@@ -19,20 +19,22 @@
   </header>
   <sidebar>
     <section>
-      <label for="task-title">task title</label>
-      <input type="text" class="task-title" placeholder="a new todo title" id="task-title" />
+      <label for="task-title-js">task title</label>
+      <input type="text" class="task-title" placeholder="a new todo title" id="task-title-js" />
       <div class="input-task">
-        <label for="task-item">task item</label>
-        <input type="text" class="task-item" placeholder="type a new item"  />
-        <button class="input-btn">+</button>
+        <label for="task-item-js">task item</label>
+        <input type="text" class="task-item" placeholder="type a new item" id="task-item-js" />
+        <button class="input-btn" id="task-btn-js">+</button>
       </div>
-      <button class="task sidebar-btn" >Make Task List</button>
-      <button class="clear sidebar-btn">Clear All</button>
+      <section class="tasks-to-add" id="tasks-to-add-js">
+      </section>
+      <button class="task sidebar-btn" id="add-task-js" >Make Task List</button>
+      <button class="clear sidebar-btn" id="clear-btn" >Clear All</button>
     </section>
     <hr>
     <button class="sidebar-btn">Filter By Urgency</button>
   </sidebar>
-    <section class='todo'>
+    <section class='todo' id="todo-js">
       <p class="task-section-text">Add some todos!</p>
   </section>
   <article class="card">
@@ -42,12 +44,12 @@
     <hr>
     <button><i class="fas fa-exclamation"></i></button>
     <button><i class="far fa-times-circle"></i></button>
+  </article>
     <!-- delete btn active/hover <i class="fas fa-times-circle"></i> -->
     <!-- delete btn not active <i class="far fa-times-circle"></i> -->
     <!-- urgent btn active/hover <i class="fas fa-exclamation-circle"></i> -->
     <!-- complete <i class="far fa-check-circle"></i> -->
     <!-- empty circle <i class="far fa-circle"></i> -->
-  </article>
 </body>
 <script src="todo.js"></script>
 <script src="index.js"></script>

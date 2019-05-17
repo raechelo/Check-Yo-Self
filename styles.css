@@ -12,8 +12,8 @@ body {
 }
 
 header {
-  background-color: #ef887f;
-  border-bottom: 5px solid #72e0e0;
+  background-color: springgreen;
+  border-bottom: 5px solid turquoise;
   display: flex;
   justify-content: space-between;
   font-family: 'Satisfy', cursive;
@@ -26,7 +26,7 @@ h1 {
 }
 
 h1 i {
-  color: #72e0e0;
+  color: darkblue;
 }
 
 .search {
@@ -34,13 +34,13 @@ h1 i {
 }
 
 .search button {
-  height: 1.7rem;
+  height: 1.9rem;
   position: relative;
   right: 0.3rem;
 }
 
 sidebar {
-  background-color: #72e0e0;
+  background-color: aquamarine;
   grid-area: sidebar;
   padding: 5px;
   text-align: center;
@@ -56,17 +56,8 @@ sidebar input {
   width: 100%;
 }
 
-sidebar section {
-  height: 17rem;
-}
-
-button:hover {
-  cursor: pointer;
-  background-color: #0d9292c8
-}
-
 input {
-  border: 1px solid #1bbaba;
+  border: 2px solid darkblue;
   height: 1.5rem;
   font-size: 1rem;
   padding-left: 2px;
@@ -92,7 +83,7 @@ input {
 }
 
 .todo {
-  background-color: #E2DBC9;
+  background-color: black;
   padding: 10px;
 }
 
@@ -103,12 +94,18 @@ input {
  }
 
 button {
-  background-color: #1bbaba;
-  border: 1px solid #11bbba;
-  height: 1.8rem;
+  background-color: springgreen;
+  border: 2px solid darkblue;
   margin: 1rem 0;
   position: relative;
   bottom: 2px;
+}
+
+button:hover {
+  background-color: darkblue;
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 hr {
@@ -116,19 +113,11 @@ hr {
 }
 
 .input-btn {
+  height: 1.8rem;
   position: relative;
-  right: .5rem;
+  right: .4rem;
 }
 
 article {
   display: none;
 }
-
-
-/* 
-//COLORS
-// #1bbaba;
-// #72e0e0;
-// #ef887f;
-// #efaba5;
-// #E2CC9E; */

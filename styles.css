@@ -1,4 +1,5 @@
 body {
+  background-color: black;
   display: grid;
   font-family: 'Open Sans', sans-serif;
   grid-template-areas: "header header"
@@ -83,8 +84,9 @@ input {
 }
 
 .todo {
-  background-color: black;
   color: hotpink;
+  display: flex;
+  flex-wrap: wrap;
   padding: 10px;
 }
 
@@ -109,6 +111,10 @@ button:hover {
   text-decoration: underline;
 }
 
+/* .urgent-btn {
+  background-color: 
+} */
+
 hr {
   border: 2px solid darkblue;
 }
@@ -119,13 +125,55 @@ hr {
   right: .4rem;
 }
 
+.urgent-btn:hover, .delete-btn:hover {
+  background-color: paleturquoise;
+  color: red;
+}
+
 article {
-  background-color: hotpink;
-  border: 2px solid deeppink;
+  background-color: lightyellow;
+  border: 2px solid yellow;
   color: black;
-  display: grid;
-  grid-template-areas: "title" "body" "btn";
-  min-height: fit-content;
-  min-width: 45%;
+  height: fit-content;
+  margin: 1rem;
+  min-width: 20%;
   padding: 10px;
+}
+
+article button {
+  background-color: yellow;
+  border: 2px solid black;
+  font-size: 1.5rem;
+  height: 2.5rem;
+  min-width: 20%;
+}
+
+.task-btns {
+  grid-area: btn;
+  display: flex;
+  justify-content: space-around;
+}
+
+.fa-circle {
+  padding-right: 5px;
+}
+
+.urgent {
+  background-color: lightpink;
+  border: 2px solid darkmagenta;
+}
+
+.urgent button {
+  background-color: white;
+  border: 2px solid darkmagenta;
+  color: darkmagenta;
+}
+
+.urgent button:hover {
+  background-color: darkmagenta;
+  color: white;
+}
+
+.urgent .urgent-btn {
+  transform: scale(1.2)
 }

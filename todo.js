@@ -1,9 +1,9 @@
 class Todo {
-  constructor() {
-    title = title,
-    task = [],
-    id = id,
-    urgent = false
+  constructor(title, tasks, id, urgent) {
+    title = title;
+    tasks = tasks;
+    id = id;
+    urgent = urgent;
   }
 
  saveToStorage = () => {
